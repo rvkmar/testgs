@@ -1,4 +1,4 @@
-const url = "https://script.google.com/macros/s/AKfycbwrgUPNMvxwBWf4I_4AZB0kY7IAQSFi9nAKVA074fIasyxyuLrUVpUOf5WX5irsTkC_/exec";
+const url = "https://script.google.com/macros/s/AKfycbxtrLIML8ctlLMO4fx7sNNDIJXDM9yubFVLI3uv0IXsxpvcZ927MjNK0xCiMOBGUtSB/exec";
 
 function testGS(){
     fetch(url)
