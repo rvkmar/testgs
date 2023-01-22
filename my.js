@@ -1,6 +1,6 @@
-function testGS(){
-    const url ="https://script.googleusercontent.com/macros/echo?user_content_key=TvOJUy0GNhBVsHh4b8M2-ARdjsnWxQpjB9b9VmMPN5bR7mHYmklQ8QY7hcU4qUdKA4PPV_y5d0uQItg-iDEEpzdRv6eguRnfm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIKd8Ajr-QJiXtrivI6Z1rOZR6QBC5HZSLZ9UOCSCC3FEEGocuRfU6J9qH6ZW0oL0BdMmPI1XI8FKTzEQbFQe0FAi4MT9UDSbA&lib=Mbcn9RcxTPUlmi7Z2ratK58ROYYGn9J7d";
+const url = "https://script.google.com/macros/s/AKfycbxiO9eVYYK-dqkqFWaHVLsGqgCWY_esdrefInXBD3rWI-xNOddYHX5EPeF8kpY5MFof/exec";
 
+function testGS(){
     fetch(url)
     .then(d => d.json())
     .then(d => {
@@ -8,4 +8,21 @@ function testGS(){
     })
 }
 
+function addGS(){
+    fetch(url,{
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        // credentials: 'omit', // include, *same-origin, omit
+        headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        redirect: 'follow', // manual, *follow, error
+        // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify({name:"Ravikumar Rajabhather"}) // body data type must match "Content-Type" header
+    });
+}
+
 document.getElementById("btn").addEventListener("click",testGS);
+document.getElementById("btn2").addEventListener("click",addGS);
